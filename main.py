@@ -1,6 +1,6 @@
 from PIL import Image
-import pytesseract
+from pytesseract import image_to_string as ocr
 
-img_file_name = 'example_file.png'
+img_file_name = 'receipt.png'
 
-print(pytesseract.image_to_string(Image.open(img_file_name)))
+print(ocr(Image.open(img_file_name)))
