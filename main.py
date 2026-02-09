@@ -1,10 +1,14 @@
 from PIL import Image
-from pytesseract import image_to_string as ocr
+from pytesseract import image_to_string
 from pdf2image import convert_from_path
 from os import remove as remove_file
 
 
+### V ### Changes allowed here!! ### V ###
+
 img_file_name = 'receipt.pdf'
+
+### ^ ### Changes allowed here!! ### ^ ###
 
 
 def get_receipt(img_file_name):
@@ -21,11 +25,11 @@ def get_receipt(img_file_name):
         
         for count, page in enumerate(pages):
             page.save(f'out{count}.jpg', 'JPEG')
-            receipt += ocr(Image.open(f'out{count}.jpg'))
+            receipt += image_to_string(Image.open(f'out{count}.jpg'))
             remove_file(f'out{count}.jpg')
 
     else:
-        receipt = ocr(Image.open(img_file_name))
+        receipt = image_to_string(Image.open(img_file_name))
 
     return receipt
 

@@ -1,4 +1,4 @@
-Here is my personal receipt reader! Still very much a work in progress
+Here is my personal receipt reader! Still very much a work in progress; right now it's basically a PDF-compatible OCR.
 
 # Required Libraries
 - poppler
