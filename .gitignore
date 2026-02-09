@@ -1,0 +1,17 @@
+# Personal receipt files
+receipt.pdf
+receipt.png
+receipt.jpg
+receipt.jpeg
+receipt.webp
+receipt.heic
+receipt.PDF
+receipt.PNG
+receipt.JPG
+receipt.JPEG
+receipt.WEBP
+receipt.HEIC
+
+# Annoying stuff
+__pycache__
+.DS_Store
